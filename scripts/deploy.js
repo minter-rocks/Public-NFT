@@ -2,10 +2,10 @@ const { ethers, upgrades } = require("hardhat");
 
   async function main() {
     // simple deploy
-    const Factory = await ethers.getContractFactory("Factory");
-    const F = await Factory.deploy();
-    await F.deployed();
-    console.log("Factory Contract Address:", F.address); 
+    const PublicNFT = await ethers.getContractFactory("PublicNFT");
+    const pub = await PublicNFT.deploy();
+    await pub.deployed();
+    console.log("PublicNFT Contract Address:", pub.address); 
   }
     
   main();
